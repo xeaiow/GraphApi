@@ -21,13 +21,3 @@ tagged = 被標記
 accounts?fields=about = 該使用者經營的粉絲專頁
 tagged_places = 我被標住過的地方(一堆資訊*)
 invitable_friends = 加我好友的人
-
-
-// 我發過的東西
-SELECT post_id, source_id, attachment, permalink, message, likes,type, created_time from stream where source_id = me()
-
-// 該篇動態的回覆(要先找到該篇動態id)
-SELECT id, text, time, fromid FROM comment WHERE object_id='10150561101545602'
-
-// TODO:
-me/?fields=age_range,context,education,cover,devices,first_name,gender,last_name,birthday,feed,posts
